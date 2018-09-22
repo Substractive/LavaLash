@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{96441393-4647-4082-90a2-4f0ee362df0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game">
+      <UniqueIdentifier>{384105e7-f599-4e46-bcb1-4f523a40cb0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine">
+      <UniqueIdentifier>{95ef901e-ebfb-4965-af3d-a31200082023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Game\GameObjects">
+      <UniqueIdentifier>{d04edb9b-32ec-4944-96e3-8da71a4450f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Core">
+      <UniqueIdentifier>{07a3ef29-79d6-4d66-be8f-ccbdb6526dd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\GameObjects">
+      <UniqueIdentifier>{1f0b2599-8ac6-472b-8702-f0c3377b69a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine\Graphic">
+      <UniqueIdentifier>{ca1f7a39-7841-460f-a7fa-b5235b4a1b03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>src\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="LoaderParams.cpp">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>src\Engine\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="SdlGameObject.cpp">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemy.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>src\Game\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>src\Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="LoaderParams.h">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>src\Engine\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="SdlGameObject.h">
+      <Filter>src\Engine\GameObjects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="..\..\SDL2-devel-2.0.8-VC\SDL2-2.0.8\lib\x86\SDL2.dll">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\SDL2_image.dll">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\libjpeg-9.dll">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\libpng16-16.dll">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\libtiff-5.dll">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\libwebp-7.dll">
+      <Filter>src</Filter>
+    </None>
+  </ItemGroup>
+</Project>
