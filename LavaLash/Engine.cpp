@@ -59,7 +59,7 @@
 	}
 
 	void Engine::clean() {
-		SDL_DestroyWindow(m_pWindow); // fixed
+		SDL_DestroyWindow(m_pWindow); // fixed this
 		SDL_DestroyRenderer(m_pRenderer);
 		IMG_Quit();
 		SDL_Quit();
