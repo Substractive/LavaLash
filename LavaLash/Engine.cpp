@@ -39,12 +39,17 @@
 		}
 
 
-		gameObjects.push_back(new Player(new LoaderParams(50, 60, 50, 60,"assets/dark_soldier-black.png", "image")));
-		gameObjects.push_back(new Enemy(new LoaderParams(100, 120, 50, 60, "assets/dark_soldier-black.png", "image")));
+		
 
 
 		m_bRunning = true;
 		return true;
+	}
+
+	void Engine::spawnObjects() {
+	
+		gameObjects.push_back(new Player(new LoaderParams(50, 60, 50, 60, "./assets/dark_soldier-hornless.png", "image")));
+		gameObjects.push_back(new Enemy(new LoaderParams(100, 120, 50, 60, "./assets/dark_soldier-hornless.png", "image1")));
 	}
 
 	void Engine::render() {

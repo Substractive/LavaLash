@@ -45,6 +45,7 @@ class SdlGameObject;
 		void clean();
 		bool running();
 		SDL_Renderer* getRenderer() const { return m_pRenderer; }
+		void spawnObjects();
 
 
 	private:

@@ -10,7 +10,7 @@
 
 
 	Enemy::Enemy(const LoaderParams* params) : SdlGameObject(params) {
-
+		this->load();
 	}
 	void Enemy::load() {
 		SdlGameObject::load();

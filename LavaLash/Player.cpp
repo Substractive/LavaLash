@@ -9,7 +9,7 @@
 #include "Player.h"
 //namespace Player {
 	Player::Player(const LoaderParams* params) : SdlGameObject(params) {
-
+		this->load();
 	}
 
 	void Player::load() {

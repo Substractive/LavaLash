@@ -23,6 +23,7 @@ SdlGameObject::SdlGameObject(const LoaderParams* pParams)
 }
 void SdlGameObject::load() {
 
+	std::cout << "SDL GAME OBJECT LOAD" << std::endl;
 	if (TextureManager::Instance()->load(texturePath, textureID)) {
 		std::cout << "error loading img" << SDL_GetError() << std::endl;
 	}
@@ -30,6 +31,7 @@ void SdlGameObject::load() {
 
 void SdlGameObject::draw()
 {
+		
 		TextureManager::Instance()->drawFrame(textureID, x, y,
 		width, height, currentRow, currentFrame);
 }

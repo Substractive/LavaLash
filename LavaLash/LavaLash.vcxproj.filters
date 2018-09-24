@@ -34,6 +34,9 @@
     <Filter Include="src\Engine\Graphic">
       <UniqueIdentifier>{ca1f7a39-7841-460f-a7fa-b5235b4a1b03}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\assets">
+      <UniqueIdentifier>{d9661eaf-ed2a-4fd4-930c-9b8a42659bbb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy.cpp">
@@ -104,5 +107,10 @@
     <None Include="..\..\SDL2_image-devel-2.0.3-VC\SDL2_image-2.0.3\lib\x86\libwebp-7.dll">
       <Filter>src</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\Dino\Downloads\dark_soldier-hornless.png">
+      <Filter>src\assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>
