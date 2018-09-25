@@ -24,8 +24,8 @@
 	}
 	void Enemy::update() {
 		SdlGameObject::update();
-		x++;
-		y++;
+		_position.setX(_position.getX() + 1);
+		_position.setY(_position.getY() + 1);
 		currentFrame = int((SDL_GetTicks() / 100) % 3);
 	}
 

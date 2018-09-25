@@ -25,6 +25,7 @@
 #include "GameObject.h"
 #include "LoaderParams.h"
 #include "TextureManager.h"
+#include "Vector2D.h"
 //namespace EngineGameObject {
 	
 		
@@ -52,9 +53,7 @@ public:
 
 protected:
 
-	int x;
-
-	int y;
+	Vector2D _position;
 
 	int width;
 

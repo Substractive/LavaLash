@@ -40,7 +40,7 @@
 
 
 		
-
+		this->spawnObjects();
 
 		m_bRunning = true;
 		return true;

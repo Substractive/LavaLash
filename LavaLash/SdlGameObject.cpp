@@ -9,11 +9,8 @@
 #include "SdlGameObject.h"
 //namespace EngineGameObject{
 
-SdlGameObject::SdlGameObject(const LoaderParams* pParams)
+SdlGameObject::SdlGameObject(const LoaderParams* pParams) : _position(pParams->getX(),pParams->getY())
 {
-
-	x = pParams->getX();
-	y = pParams->getY();
 	width = pParams->getWidth();
 	height = pParams->getHeight();
 	textureID = pParams->getTextureID();
@@ -32,7 +29,7 @@ void SdlGameObject::load() {
 void SdlGameObject::draw()
 {
 		
-		TextureManager::Instance()->drawFrame(textureID, x, y,
+		TextureManager::Instance()->drawFrame(textureID, _position.getX(), _position.getY(),
 		width, height, currentRow, currentFrame);
 }
 

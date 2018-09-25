@@ -22,7 +22,7 @@
 	void Player::update() {
 		SdlGameObject::update();
 		currentFrame = int((SDL_GetTicks() / 100) % 3);
-		x--;
+		_position.setX(_position.getX() - 1);
 	}
 	void Player::clean() {
 		SdlGameObject::clean();
