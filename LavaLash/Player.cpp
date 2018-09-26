@@ -23,7 +23,8 @@
 	
 		currentFrame = int((SDL_GetTicks() / 100) % 3);
 		//_position.setX(_position.getX() - 1);
-		_velocity.setX(1);
+		_acceleration.setX(1);
+		//_velocity.setX(1);
 		SdlGameObject::update();
 	}
 	void Player::clean() {
