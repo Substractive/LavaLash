@@ -20,7 +20,7 @@ int main(int argc,  char * argv[]) {
 	// insert code here...
 	Uint32 frameStart, frameTime;
 	SDL_SetMainReady();
-	 Engine::Instance()->init("LavaLash", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 640, false);
+	Engine::Instance()->init("LavaLash", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 640, false);
 	
 	while (Engine::Instance()->running()) {
 		frameStart = SDL_GetTicks();
