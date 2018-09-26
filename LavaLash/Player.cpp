@@ -20,9 +20,11 @@
 		SdlGameObject::draw(); // we now use SDLGameObject
 	}
 	void Player::update() {
-		SdlGameObject::update();
+	
 		currentFrame = int((SDL_GetTicks() / 100) % 3);
-		_position.setX(_position.getX() - 1);
+		//_position.setX(_position.getX() - 1);
+		_velocity.setX(1);
+		SdlGameObject::update();
 	}
 	void Player::clean() {
 		SdlGameObject::clean();

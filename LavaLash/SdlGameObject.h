@@ -55,6 +55,8 @@ protected:
 
 	Vector2D _position;
 
+	Vector2D _velocity;
+
 	int width;
 
 	int height;

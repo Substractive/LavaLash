@@ -9,7 +9,7 @@
 #include "SdlGameObject.h"
 //namespace EngineGameObject{
 
-SdlGameObject::SdlGameObject(const LoaderParams* pParams) : _position(pParams->getX(),pParams->getY())
+SdlGameObject::SdlGameObject(const LoaderParams* pParams) : _position(pParams->getX(),pParams->getY()),_velocity(0,0)
 {
 	width = pParams->getWidth();
 	height = pParams->getHeight();
@@ -34,7 +34,7 @@ void SdlGameObject::draw()
 }
 
 void SdlGameObject::update() {
-
+	_position += _velocity;
 }
 
 void SdlGameObject::clean() {
