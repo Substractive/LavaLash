@@ -9,7 +9,7 @@
 #include "SdlGameObject.h"
 //namespace EngineGameObject{
 
-SdlGameObject::SdlGameObject(const LoaderParams* pParams) : _position(pParams->getX(), pParams->getY()), _velocity(0, 0), _acceleration(0, 0)
+SdlGameObject::SdlGameObject(const LoaderParams* pParams): _position(pParams->getX(), pParams->getY()), _velocity(0, 0), _acceleration(0, 0)
 {
 	width = pParams->getWidth();
 	height = pParams->getHeight();
@@ -23,14 +23,13 @@ void SdlGameObject::load() {
 	std::cout << "SDL GAME OBJECT LOAD" << std::endl;
 	if (TextureManager::Instance()->load(texturePath, textureID)) {
 		std::cout << "error loading img" << SDL_GetError() << std::endl;
-	}
+	} 
 }
 
 void SdlGameObject::draw()
 {
-		
-		TextureManager::Instance()->drawFrame(textureID, _position.getX(), _position.getY(),
-		width, height, currentRow, currentFrame);
+	TextureManager::Instance()->drawFrame(textureID, _position.getX(), _position.getY(),
+	width, height, currentRow, currentFrame);
 }
 
 void SdlGameObject::update() {

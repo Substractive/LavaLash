@@ -23,6 +23,7 @@ int main(int argc,  char * argv[]) {
 	Engine::Instance()->init("LavaLash", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 640, false);
 	
 	while (Engine::Instance()->running()) {
+		std::cout << "Run" << std::endl;
 		frameStart = SDL_GetTicks();
 
 		Engine::Instance()->handleEvents();
@@ -31,7 +32,7 @@ int main(int argc,  char * argv[]) {
 		frameTime = SDL_GetTicks() - frameStart;
 
 		if (frameTime < DELAY_TIME) {
-			SDL_Delay((int)(DELAY_TIME - frameStart));
+			SDL_Delay((int)(DELAY_TIME - frameTime));
 		}
 	}
 	Engine::Instance()->clean();

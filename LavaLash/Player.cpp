@@ -21,13 +21,24 @@
 	}
 	void Player::update() {
 	
-		currentFrame = int((SDL_GetTicks() / 100) % 3);
-		//_position.setX(_position.getX() - 1);
-		_acceleration.setX(1);
-		//_velocity.setX(1);
+		currentFrame = 1;//int((SDL_GetTicks() / 100) % 3);
+		handleInput();
+		_velocity.setX(1);
 		SdlGameObject::update();
 	}
 	void Player::clean() {
 		SdlGameObject::clean();
+	}
+
+	void Player::handleInput() {
+		
+		std::cout << "Player handle input" << std::endl;
+		std::cout << TheInputHandler::Instance()->getMousePosition() << std::endl;
+		Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+		_velocity = (*vec - _position) / 100;
+		
+		/*if (TheInputHandler::Instance()->getMouseButtonState(LEFT)) {
+			_velocity.setX(1);
+		}*/
 	}
 //}

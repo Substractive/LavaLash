@@ -38,7 +38,7 @@
 			return false;
 		}
 
-
+		InputHandler::Instance();
 		
 		this->spawnObjects();
 
@@ -67,21 +67,22 @@
 		SDL_DestroyWindow(m_pWindow); // fixed this
 		SDL_DestroyRenderer(m_pRenderer);
 		IMG_Quit();
+		TheInputHandler::Instance()->clean();
 		SDL_Quit();
 	}
 
 	void Engine::handleEvents() {
 		SDL_Event event;
-		if (SDL_PollEvent(&event)) {
-			switch (event.type) {
-			case SDL_QUIT:
+		while (SDL_PollEvent(&event)) {
+			if (event.type == SDL_QUIT) {
+				std::cout << "QUIT" << std::endl;
 				m_bRunning = false;
-				break;
-
-			default:
-				break;
 			}
-		}
+			else {
+				std::cout << "ELSE" << std::endl;
+				InputHandler::Instance()->update(event);
+			}
+		} 
 	}
 
 	void Engine::update() {

@@ -64,7 +64,10 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="Vector2D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>src\Engine\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +93,10 @@
       <Filter>src\Engine\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="Vector2D.h">
-      <Filter>Header Files</Filter>
+      <Filter>src\Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>src\Engine\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

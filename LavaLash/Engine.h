@@ -17,13 +17,16 @@
 #include "TextureManager.h"
 //#include "GameObject.h"
 //#include "SdlGameObject.h"
+#include "InputHandler.h"
 #include "Player.h"
 #include "Enemy.h"
+
+
 
 //namespace Core {
 	
 	
-	
+
 
 class SdlGameObject;
 
@@ -61,6 +64,7 @@ class SdlGameObject;
 		 //Player::Player* player;
 		 Player* player;
 		std::vector<SdlGameObject*> gameObjects;
+		InputHandler* _inputInstace;
 	};
 
 //}

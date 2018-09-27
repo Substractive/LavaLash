@@ -15,6 +15,7 @@
 
 #include "SdlGameObject.h"
 #include "LoaderParams.h"
+#include "InputHandler.h"
 
 
 ;
@@ -28,6 +29,8 @@
 		void draw();
 		void update();
 		void clean();
+	private:
+		void handleInput();
 	};
 //}
 
