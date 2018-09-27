@@ -27,12 +27,15 @@ public:
 	void clean();
 	bool getMouseButtonState(int buttonNumber);
 	Vector2D* getMousePosition();
+	bool isKeyDown(SDL_Scancode key);
 private:
 	static InputHandler* _instance;
 	Vector2D * _mousePosition;
 	InputHandler();
 	~InputHandler() {}
 	std::vector<bool> _mouseButtonStates;
+	const Uint8* _keystate;
+	
 };
 
 typedef InputHandler TheInputHandler;

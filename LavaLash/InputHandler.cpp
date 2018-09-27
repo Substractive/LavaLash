@@ -22,7 +22,21 @@ Vector2D* InputHandler::getMousePosition() {
 	return _mousePosition;
 }
 
+bool InputHandler::isKeyDown(SDL_Scancode key) {
+
+	if (_keystate != 0) {
+		if (_keystate[key] == 1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	return false;
+}
+
 void InputHandler::update(SDL_Event &event) {
+	_keystate = SDL_GetKeyboardState(0);
 	std::cout << "Input handler check event" << std::endl;
 	if (event.type == SDL_MOUSEBUTTONDOWN) {
 		if (event.button.button == SDL_BUTTON_LEFT) {

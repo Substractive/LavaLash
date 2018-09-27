@@ -23,7 +23,7 @@
 	
 		currentFrame = 1;//int((SDL_GetTicks() / 100) % 3);
 		handleInput();
-		_velocity.setX(1);
+		
 		SdlGameObject::update();
 	}
 	void Player::clean() {
@@ -34,9 +34,31 @@
 		
 		std::cout << "Player handle input" << std::endl;
 		std::cout << TheInputHandler::Instance()->getMousePosition() << std::endl;
-		Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
-		_velocity = (*vec - _position) / 100;
-		
+
+		// FOLLOW MOUSE
+		//Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+		//_velocity = (*vec - _position) / 100;
+		// END FOLLOW MOUSE
+
+		// KEYBOARD MOVEMENT
+		if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT)) {
+			_velocity.setX(2);
+		}
+
+		if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT)) {
+			_velocity.setX(-2);
+		}
+
+		if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP)) {
+			_velocity.setY(-2);
+		}
+
+		if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN)) {
+			_velocity.setY(2);
+		}
+		// END KEYBOARD MOVEMENT
+
+
 		/*if (TheInputHandler::Instance()->getMouseButtonState(LEFT)) {
 			_velocity.setX(1);
 		}*/
