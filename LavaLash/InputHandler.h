@@ -35,6 +35,14 @@ private:
 	~InputHandler() {}
 	std::vector<bool> _mouseButtonStates;
 	const Uint8* _keystate;
+	// keyboard events
+	void onKeyDown();
+	void onKeyUp();
+	// mouse events
+	void onMouseMove(SDL_Event& event);
+	void onMouseButtonDown(SDL_Event& event);
+	void onMouseButtonUp(SDL_Event& event);
+
 	
 };
 
